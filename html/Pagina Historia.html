@@ -11,70 +11,13 @@
 </head>
 
 <body>
-    <!-- parte do login e cadastro -->
-    <div class="popuplogin">
-        <div class="popuploginfilho">
-            <img src="../src/img/outros/Logo genshin.png" alt="Logo Genshin" class="logogenshinlogin">
-            <img src="../src/img/vetores/Close vetor.svg" alt="Fechar" class="close">
-            <div class="classinput">
-                <h3>Digite seu email</h3>
-                <div class="input1">
-                    <input type="text" class="email">
-                </div>
-                <h3>Digite sua senha</h3>
-                <div class="input2">
-                    <input type="password" class="senha">
-                </div>
-            </div>
-            <h1>Não tem uma conta ainda?</h1>
-            <a href="" id="Cadastrar"><h2>Cadastrar</h2></a>
-
-            <div class="botaologin">
-                <img src="../src/img/vetores/setas vetor.svg" alt="Avançar">
-                <div class="caixalogin"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- html do cadastro -->
-    <div class="popupcadastro">
-        <div class="popupcadastrofilho">
-            <img src="../src/img/outros/Logo genshin.png" alt="Logo Genshin" class="logogenshinlogin">
-            <img src="../src/img/vetores/Close vetor.svg" alt="Fechar" class="close">
-            <div class="classinput">
-                <h3>Digite seu email</h3>
-                <div class="input1">
-                    <input type="text" class="email">
-                </div>
-                <h3>Digite seu nome</h3>
-                <div class="input4">
-                    <input type="text" class="nome">
-                </div>
-                <h3>Digite sua senha</h3>
-                <div class="input2">
-                    <input type="password" class="senha">
-                </div>
-                <h3>Confirme sua senha</h3>
-                <div class="input3">
-                    <input type="password" class="senha">
-                </div>
-            </div>
-            <h1>Já tem uma conta?</h1>
-           <a href="" id="login_cadastro"><h2>Login</h2></a>
-
-            <div class="botaologin" onclick="">
-                <img src="../src/img/vetores/setas vetor.svg" alt="Avançar">
-                <div class="caixalogin"></div>
-            </div>
-        </div>
-    </div>
 
     <!-- HTML do header -->
     <nav class="headerpai">
         <div class="headerfilho">
             <img src="../src/img/elementos brancos/elemento Geo.png" alt="Elemento Geo" class="hf1">
             <img src="../src/img/outros/Logo genshin.png " alt="Logo Genshin Impact" class="hf2">
-            <a href="" id="login"><img src="../src/img/outros/profile pic.webp" alt="Imagem da conta do Usuario"class="hf3"></a>
+            <a href="../html/Pagina de login.html" id=""><img src="../src/img/outros/profile pic.webp" alt="Imagem da conta do Usuario"class="hf3"></a>
         </div>
     </nav>
     <!-- fim do html do header -->
@@ -157,10 +100,6 @@
             </div>
 
             <div class="funcionalidadepai">
-                <div class="curtir">
-                    <h1>Curtir</h1>
-                    <img src="../src/img/vetores/vetor coração vermelho.svg" alt="Coração">
-                </div>
                 <div class="comentarios">
                     <h1>Comentarios</h1>
                     <img src="../src/img/vetores/vetor comentario.svg" alt="comentario">
@@ -183,36 +122,3 @@
 </body>
 
 </html>
-
-<script>
-     // script do login 
-     document.getElementById("login").addEventListener("click", function (event) {
-        document.querySelector(".popuplogin").style.display = "flex";
-        event.preventDefault();
-        event.stopPropagation();
-    })
-
-    document.querySelector(".popuplogin .close").addEventListener("click", function () {
-        document.querySelector(".popuplogin").style.display = "none";
-    })
-
-    // script do login para o cadastro
-    document.getElementById("Cadastrar").addEventListener("click", function (event) {
-        document.querySelector(".popupcadastro").style.display = "flex";
-        document.querySelector(".popuplogin").style.display = "none";
-        event.preventDefault();
-        event.stopPropagation();
-    })
-
-    document.querySelector(".popupcadastro .close").addEventListener("click", function () {
-        document.querySelector(".popupcadastro").style.display = "none";
-    })
-
-    // scritp do cadastro para o login 
-    document.getElementById("login_cadastro").addEventListener("click", function (event) {
-        document.querySelector(".popupcadastro").style.display = "none";
-        document.querySelector(".popuplogin").style.display = "flex";
-        event.preventDefault();
-        event.stopPropagation();
-    })
-</script>
