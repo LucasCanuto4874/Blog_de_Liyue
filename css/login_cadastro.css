@@ -296,3 +296,26 @@ body {
 .popupcadastrofilho .botaologin img {
     transform: translate(95px);
 }
+
+/* css do footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background: var(--azul_13_saturacao);
+    margin-top: 102px;
+}
+
+footer .geoimgfooter {
+    height: 167px;
+    width: 153px;
+}
+
+footer img {
+    padding: 16px;
+}
+footer a{
+    text-decoration: none;
+}
