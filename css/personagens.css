@@ -94,6 +94,14 @@ body {
 .nav2 h2 {
     font-family: sdk;
     color: var(--branco);
+    transition: 0.4s;
+    cursor: pointer;
+}
+h2:hover{
+    color: var(--azul_33_brilho);
+}
+a{
+    text-decoration: none;
 }
 
 .nav2 img {

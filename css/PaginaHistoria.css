@@ -101,6 +101,15 @@ body {
 .nav2 h2 {
     font-family: sdk;
     color: var(--branco);
+    cursor: pointer;
+    transition: 0.4s;
+}
+h2:hover{
+    color: var(--laranja_76_saturação);
+}
+
+a {
+    text-decoration: none;
 }
 
 .nav2 img {
@@ -185,12 +194,14 @@ body {
     align-items: center;
     margin-top: 20px;
 }
+
 form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .caixa_comentarios textarea {
     border: 1px solid var(--cinza);
     background-color: var(--azul_33_brilho);
@@ -202,6 +213,7 @@ form {
     resize: none;
     margin-top: 30px;
 }
+
 .caixa_comentarios textarea::placeholder {
     font-size: 18px;
     font-family: sdk;
@@ -210,6 +222,7 @@ form {
     padding-left: 51px;
     padding-bottom: 50px;
 }
+
 .caixa_comentarios button {
     background-color: var(--laranja_76_saturação);
     color: var(--branco);
@@ -223,6 +236,7 @@ form {
     margin-bottom: 25px;
     align-self: flex-end;
 }
+
 /* css do footer */
 footer {
     display: flex;
@@ -233,13 +247,16 @@ footer {
     background: var(--azul_13_saturacao);
     margin-top: 102px;
 }
+
 footer .geoimgfooter {
     height: 167px;
     width: 153px;
 }
+
 footer img {
     padding: 16px;
 }
+
 footer a {
     text-decoration: none;
 }
