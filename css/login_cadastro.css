@@ -15,6 +15,7 @@
     --azul_13_saturacao: #323942;
     --vermelho_58_brilho: #FB2D2D;
     --azul_login: #00AEE5;
+    --laranja_86_saturacao: #E67511;
 }
 
 body,
@@ -78,7 +79,7 @@ body {
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    background-color: var(--vermelho_58_brilho);
+    background-color: var(--laranja_86_saturacao);
     border-radius: 20px;
     width: 626px;
     height: 694px;
@@ -148,7 +149,7 @@ body {
 
 .popuploginfilho h2 {
     font-family: sdk;
-    color: var(--azul_login);
+    color: var(--azul_33_brilho);
     padding-top: 13px;
     transition: 0.4s;
 }
@@ -198,7 +199,7 @@ body {
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    background-color: var(--vermelho_58_brilho);
+    background-color: var(--laranja_86_saturacao);
     border-radius: 20px;
     width: 626px;
     height: 950px;
@@ -284,7 +285,7 @@ body {
 
 .popupcadastrofilho h2 {
     font-family: sdk;
-    color: var(--azul_login);
+    color: var(--azul_33_brilho);
     padding-top: 13px;
     text-decoration: none;
     transition: 0.4s;
