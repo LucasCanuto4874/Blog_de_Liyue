@@ -28,8 +28,9 @@ html {
 }
 
 body {
-    background-image: url(../src/img/outros/Fundo\ do\ site.svg);
+    background-image: url(../src/img/imagens_home/fundo_home.svg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Css do Header */
@@ -82,14 +83,21 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* terceira linha dos cards */
+.terceiraLinha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* css dos cards */
 .quadrado{
     width: 600px;
     height: fit-content;
-    margin: 5%;
+    margin: 3%;
     transition: 0.6s;
     cursor: pointer;
+    transform: scale(0.9);
 }
 .texto_quadrado{
     width: 100%;
@@ -107,17 +115,23 @@ body {
 /* Animação dos quadrado */
 
 .primeiraLinha .q1:hover{
-    transform: scale(1.05);
+    transform: scale(1);
 }
 .primeiraLinha .q2:hover{
-    transform: scale(1.05);
+    transform: scale(1);
 }   
 .segundaLinha .q3:hover{
-    transform: scale(1.05);
+    transform: scale(1);
 }   
 .segundaLinha .q4:hover{
-    transform: scale(1.05);
-}      
+    transform: scale(1);
+}
+.terceiraLinha .q5:hover{
+    transform: scale(1);
+}    
+.terceiraLinha .q6:hover{
+    transform: scale(1);
+}       
 
 /* css do footer */
 footer {

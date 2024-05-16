@@ -269,6 +269,15 @@ body {
 .popupcadastrofilho .classinput .input4 {
     padding-bottom: 30px;
 }
+.popupcadastrofilho .classinput select {
+    width: 550px;
+    height: 78px;
+    border-radius: 20px;
+    border: none;
+    font-family: sdk;
+    font-size: 16px;
+    color: var(--laranja_86_saturacao);
+}
 .text_persona_fav{
     margin-top: 30px;
 }
