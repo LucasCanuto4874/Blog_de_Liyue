@@ -1,10 +1,10 @@
 // Quadrado com a função de ir para a outra pagina
 
 function virarpagina(quadrado) {
-
     var idQuadrado = quadrado;
-    var url = 'Pagina Historia.html?id=' + idQuadrado;
-    window.location.href = url
+    sessionStorage.setItem('clickQuadrado', idQuadrado);
+    var url = 'Pagina Historia.html';
+    window.location.href = url;
 }
 
 function selecao() {
@@ -32,6 +32,7 @@ function selecao() {
 
 // Mostrando as publicacoes do banco de dados
 function atualizarFeed() {
+    var idQuadradoClicado = sessionStorage.getItem('clickQuadrado')
 
     // postagem do banco de dados
     fetch(`/publicacao/mostrar/${idQuadradoClicado}`)

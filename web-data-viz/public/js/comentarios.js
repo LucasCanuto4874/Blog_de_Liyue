@@ -40,7 +40,7 @@ function publicar() {
 
 // Exibindo comentarios das postagens 
 function atualizarComentarios() {
-    fetch(`/avisos/listarPorIdPubli/${idQuadradoClicado}`)
+    fetch(`/avisos/listarPorIdPubli/${ax_quadrado}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 resposta.json().then(function (resposta) {
