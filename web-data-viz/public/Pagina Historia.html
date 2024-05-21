@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de Liyue</title>
+    <link rel="stylesheet" href="css/Reset.css">
+    <link rel="stylesheet" href="css/PaginaHistoria.css">
+</head>
+
+<body onload="atualizarFeed(), atualizarComentarios(), iniciarComentarios()">
+
+    <!-- HTML do header -->
+    <nav class="headerpai">
+        <div class="headerfilho">
+            <img src="src/img/elementos brancos/elemento Geo.png" alt="Elemento Geo" class="hf1">
+            <img src="src/img/outros/Logo genshin.png " alt="Logo Genshin Impact" class="hf2">
+            <a href="login.html" id=""><img src="src/img/outros/profile pic.webp" alt="Imagem da conta do Usuario"
+                    class="hf3"></a>
+        </div>
+    </nav>
+    <!-- fim do html do header -->
+
+    <main class="mainpai">
+        <section class="sectionpai">
+            <div class="nav2">
+                <a href="index.html">
+                    <h2>Home</h2>
+                </a>
+                <a href="Pagina de personagens.html">
+                    <h2>Personagens</h2>
+                </a>
+                <img src="src/img/elementos brancos/Elemento geo branco recortado.svg" alt="Elemento Geo branco"
+                    class="imgelementgeobranco">
+            </div>
+            <div class="conteudopai" id="feed_container"> </div>
+        </section>
+
+        <figure class="figurepai">
+            <img src="src/img/vetores/Property 1=Card 1 Liyue.svg" alt="Foto de Liyue" class="img1">
+            <img src="src/img/vetores/Property 1=Card 2 Liyue.svg" alt="Foto de Liyue">
+            <img src="src/img/vetores/Property 1=Card Liyue 3.svg" alt="Foto de Liyue" class="img3">
+        </figure>
+    </main>
+
+    <section class="comentarios">
+        <div class="caixa_comentarios">
+            <form id="form_postagem" method="post" onsubmit="return publicar()">
+                <label>
+                    <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"
+                        placeholder="Comente você tambem!"></textarea>
+                </label>
+                <button onclick="iniciarComentarios()">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="feed_comentarios">
+        
+    </div>
+
+    <footer>
+        <a href="https://github.com/LucasCanuto4874/Blog_de_Liyue"><img src="src/img/outros/logo github.svg"
+                alt="github"></a>
+        <img src="src/img/elementos brancos/elemento Geo.png" alt="Elemento Geo" class="geoimgfooter">
+        <img src="src/img/outros/logo likedin.svg" alt="likedin">
+    </footer>
+
+    <script src="js/publi.js"></script>
+    <script src="js/comentarios.js"></script>
+</body>
+
+</html>
+
+<script>
+    function obterParametroUrl(parametro) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(parametro);
+    }
+
+    var idQuadradoClicado = obterParametroUrl('id');
+</script>

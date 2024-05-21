@@ -89,6 +89,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+a{
+    text-decoration: none;
+}
 
 /* css dos cards */
 .quadrado{
