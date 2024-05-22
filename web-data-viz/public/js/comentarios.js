@@ -40,7 +40,10 @@ function publicar() {
 
 // Exibindo comentarios das postagens 
 function atualizarComentarios() {
-    fetch(`/avisos/listarPorIdPubli/${ax_quadrado}`)
+
+    var idQuadradoClicado = sessionStorage.getItem('clickQuadrado')
+    
+    fetch(`/avisos/listarPorIdPubli/${idQuadradoClicado}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 resposta.json().then(function (resposta) {
