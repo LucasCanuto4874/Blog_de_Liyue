@@ -125,6 +125,11 @@
             finalizarAguardar();
             return false;
         }
+        else if (elementoVar == "") {
+            alert(`Selecione um elemento favorito!`)
+            finalizarAguardar();
+            return false;
+        }
         else {
             setInterval(sumirMensagem, 5000);
         }
@@ -142,7 +147,6 @@
                 emailServer: emailVar,
                 senhaServer: senhaVar,
                 elementoServer: elementoVar,
-
                 // empresaServer: empresaVar,
                 // cpfServer: cpfVar,
             }),
