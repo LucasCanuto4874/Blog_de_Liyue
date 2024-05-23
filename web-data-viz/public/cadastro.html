@@ -81,7 +81,6 @@
 
 <script>
     function cadastrar() {
-        // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -92,46 +91,35 @@
         var elementoVar = elemento_input.value
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || elementoVar == "" || elementoVar == "#") {
             alert(`Preencha todos os campos!`)
-            finalizarAguardar();
             return false;
         }
         else if (emailVar.indexOf("@") < 0 || emailVar.indexOf(".com") < 0) {
             alert(`Insira o email corretamente!`)
-            finalizarAguardar();
             return false;
         }
         else if (nomeVar.length <= 1) {
             alert(`Nome maior que 1 caracter`)
-            finalizarAguardar();
             return false;
         }
         else if (senhaVar != confirmacaoSenhaVar) {
             alert(`As senhas estão diferentes!`)
-            finalizarAguardar();
             return false;
         }
         else if (senhaVar.length > 8 || senhaVar.length < 0) {
             alert(`Senha tem que ter no maximo 8`)
-            finalizarAguardar();
             return false;
         }
         else if (senhaVar.length <= 0) {
             alert(`Digite uma senha`)
-            finalizarAguardar();
             return false;
         }
         else if (senhaVar != confirmacaoSenhaVar) {
             alert(`Digite a senha corretamente!`)
-            finalizarAguardar();
             return false;
         }
         else if (elementoVar == "") {
             alert(`Selecione um elemento favorito!`)
-            finalizarAguardar();
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000);
         }
 
         // Enviando o valor da nova input
@@ -163,14 +151,12 @@
                     }, "2000");
 
                     // limparFormulario();
-                    finalizarAguardar();
                 } else {
                     throw "Houve um erro ao tentar realizar o cadastro!";
                 }
             })
             .catch(function (resposta) {
                 console.log(`#ERRO: ${resposta}`);
-                finalizarAguardar();
             });
 
         return false;

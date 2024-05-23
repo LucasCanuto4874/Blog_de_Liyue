@@ -26,6 +26,8 @@ var contador_Pyro = 0
 var contador_Dendro = 0
 var contador_Eletro = 0
 
+var dadosElementos = []
+
 function plotarGrafico(resposta) {
 
     console.log('iniciando plotagem do gráfico...');
@@ -35,23 +37,20 @@ function plotarGrafico(resposta) {
     var lista_elementos = resposta
 
     // Criando estrutura para plotar gráfico - dados
+
+
     const ctx = document.getElementById('myChart');
 
-    new Chart(ctx, {
+    if(grafico){
+        grafico.destroy()
+    }
+   var grafico = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ['Cryo', 'Hydro', 'Anemo', 'Geo', 'Pyro', 'Dendro', 'Eletro'],
             datasets: [{
                 label: 'Qual o elemento mais adorado?',
-                data: [
-                    contador_Cryo,
-                    contador_Hydro,
-                    contador_Anemo,
-                    contador_Geo,
-                    contador_Pyro,
-                    contador_Dendro,
-                    contador_Eletro
-                ],
+                data: dadosElementos,
                 borderWidth: 0
             }]
         },
@@ -94,20 +93,14 @@ function plotarGrafico(resposta) {
         else {
             contador_Eletro++
         }
-
-        // labels.push(registro.momento_grafico);
-        // dados.datasets[0].data.push(registro.umidade);
-        // dados.datasets[1].data.push(registro.temperatura);
     }
-
+    dadosElementos.push(contador_Cryo, contador_Hydro, contador_Anemo, contador_Geo, contador_Pyro, contador_Dendro, contador_Eletro);
 
 
     console.log('----------------------------------------------')
     console.log('O gráfico será plotado com os respectivos valores:')
-    console.log('Labels:')
-    console.log(labels)
     console.log('Dados:')
-    // console.log(dados.datasets)
+    console.log(lista_elementos)
     console.log('----------------------------------------------')
 
     // setTimeout(() => atualizarGrafico(resposta, dados, myChart), 2000);
