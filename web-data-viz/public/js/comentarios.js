@@ -1,6 +1,7 @@
 // publicando comentarios
 function publicar() {
     var idUsuario = sessionStorage.ID_USUARIO;
+    var idQuadradoClicado = sessionStorage.getItem('clickQuadrado')
 
     if(idUsuario == undefined){
         alert(`Crie uma conta ou faça o login`)
@@ -22,6 +23,8 @@ function publicar() {
         }).then(function (resposta) {
     
             console.log("resposta: ", resposta);
+            iniciarComentarios()
+            atualizarComentarios()
     
             if (resposta.ok) {
                 window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
@@ -33,7 +36,7 @@ function publicar() {
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
-    
+        
         return false;
     }
 }
@@ -42,7 +45,6 @@ function publicar() {
 function atualizarComentarios() {
 
     var idQuadradoClicado = sessionStorage.getItem('clickQuadrado')
-    
     fetch(`/avisos/listarPorIdPubli/${idQuadradoClicado}`)
         .then(function (resposta) {
             if (resposta.ok) {

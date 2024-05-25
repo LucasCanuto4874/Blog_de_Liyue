@@ -105,9 +105,11 @@ body {
     cursor: pointer;
     transition: 0.4s;
 }
-.nav2 h2:hover{
+
+.nav2 h2:hover {
     color: var(--laranja_76_saturação);
 }
+
 a {
     text-decoration: none;
 }
@@ -212,7 +214,7 @@ form {
     outline: none;
     resize: none;
     margin-top: 30px;
-    
+
 }
 
 .caixa_comentarios textarea::placeholder {
@@ -239,41 +241,51 @@ form {
     cursor: pointer;
 }
 
+#feed_comentarios{
+    width: 850px;
+    height: 200px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
 /* css do feed de comentarios */
-
-.resultados{
+.resultados {
     margin-left: 150px;
     background-color: var(--azul_33_brilho);
     width: 850px;
-    height: fit-content;
+    height: 350px;
     border-radius: 20px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
-.postagens{
+
+.postagens {
     display: flex;
     align-items: start;
     justify-content: start;
     flex-direction: column;
     margin-left: 27px;
 }
-.nomePostagem{
+
+.nomePostagem {
     font-family: sdk;
     font-size: 14px;
     color: var(--branco);
     padding-left: 22px;
     padding-top: 38px;
 }
-.textoComentario{
+
+.textoComentario {
     border: 1px solid var(--cinza);
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: var(--azul_33_brilho);
     width: 800px;
-    height: 100px;
+    height: fit-content;
     margin: 17px 20px;
 }
-.letras_comentarios{
+
+.letras_comentarios {
     font-size: 13px;
     font-family: sdk;
     width: fit-content;
@@ -281,7 +293,9 @@ form {
     color: var(--branco);
     margin-top: 10px;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
+
 /* css do footer */
 footer {
     display: flex;
