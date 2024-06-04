@@ -29,6 +29,17 @@ body {
     background-image: url(../src/img/outros/Fundo\ do\ site.svg);
     background-repeat: no-repeat;
 }
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--azul_principal);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--laranja_76_saturação);
+    border-radius: 20px;
+}
 
 .headerpai {
     background-color: rgb(0, 0, 0, 0.55);
@@ -63,7 +74,17 @@ body {
     border-radius: 100%;
     margin-right: 43px;
 }
-
+.headerfilho a{
+    font-size: 24px;
+    font-family: sdk;
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    transition: 0.5s;
+}
+.headerfilho a:hover{
+    color: var(--laranja_86_saturacao);
+}
 /* css do popup login */
 .popuplogin {
     width: 100%;
@@ -158,7 +179,7 @@ body {
     text-decoration: none;
 }
 
- h2:hover {
+ .popuploginfilho h2:hover {
    color: var(--branco);
 }
 
@@ -304,7 +325,7 @@ a {
     text-decoration: none;
 }
 
-h2:hover {
+.popupcadastrofilho h2:hover {
     color: var(--branco);
 }
 

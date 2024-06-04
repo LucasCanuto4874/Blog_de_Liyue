@@ -1,0 +1,163 @@
+@font-face {
+    font-family: sdk;
+    src: url(../src/font/ja-jp.ttf);
+}
+
+@font-face {
+    font-family: josefin;
+    src: url(../src/font/JosefinSans-VariableFont_wght.ttf);
+}
+
+:root {
+    --azul_33_brilho: #274E81;
+    --azul_principal: #1B3659;
+    --branco: #ffffff;
+    --azul_13_saturacao: #323942;
+    --vermelho_58_brilho: #FB2D2D;
+    --azul_login: #00AEE5;
+    --cinza: #A8A8A8;
+    --laranja_76_saturação: #D9761E;
+    --laranja_principal: #F27405;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--azul_principal);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--laranja_76_saturação);
+    border-radius: 20px;
+}
+.imgbanner{
+    height: 720px;
+    width: 100%;
+    background-image: url(../src/img/imagens_home/Plano\ de\ fundo\ header.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.textpai{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+}
+.textPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+}
+.textPrincipal h1{
+    color: var(--laranja_principal);
+    font-size: 50px;
+    height: fit-content;
+    font-family: sdk;
+}
+.textPrincipal button{
+    width: 442px;
+    height: fit-content;
+    font-size: 24px;
+    background-color: var(--laranja_principal);
+    color: var(--branco);
+    padding: 15px;
+    border: none;
+    font-family: sdk;
+    border-radius: 20px;
+    margin-top: 101px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 3;
+}
+.textPrincipal button:hover{
+    transform: scale(1.07);
+}
+.qLaranja{
+    width: 810px;
+    height: fit-content;
+    background-color: var(--laranja_principal);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    margin-left: 34px;
+    margin-bottom: 64px;
+    z-index: 2;
+}
+.qBranco{
+    width: 734px;
+    height: fit-content;
+    margin: 37px;
+    background-color: var(--branco);
+    border-radius: 20px;
+    font-family: sdk;
+    padding: 44px;
+    background-image: url(../src/img/imagens_home/elemento\ geo\ laranja.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+.tituloSection {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+.paragrafo {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.conteudoPai{
+    width: 100%;
+    display: flex;
+    background-color: #0B455A;
+}
+.conteudoPai img{
+    height: auto;
+    object-fit: cover;
+    margin-top: -290px;
+    margin-left: -238px;
+    z-index: 1;
+}
+
+
+/* css do footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background: var(--azul_13_saturacao);
+    margin-top: 20;
+}
+
+footer .geoimgfooter {
+    height: 167px;
+    width: 153px;
+}
+
+footer img {
+    padding: 16px;
+}
+
+footer a {
+    text-decoration: none;
+}

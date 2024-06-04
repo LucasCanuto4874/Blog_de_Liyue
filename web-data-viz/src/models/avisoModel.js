@@ -7,7 +7,8 @@ function listarPorIdPubli(fkPublicacao) {
 	ON c.fkPublicacao = p.idPublicacao
 		JOIN usuario as u
 			ON c.fkUsuario = u.idUsuario
-			WHERE idPublicacao = ${fkPublicacao};
+			WHERE idPublicacao = ${fkPublicacao}
+                ORDER BY c.idComentario DESC;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

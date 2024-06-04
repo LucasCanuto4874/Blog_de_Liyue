@@ -32,6 +32,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+body::-webkit-scrollbar{
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--azul_principal);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--laranja_76_saturação);
+    border-radius: 20px;
+}
 
 /* Css do Header */
 .headerpai {
@@ -66,6 +77,18 @@ body {
     border-radius: 100%;
     margin-right: 43px;
 }
+.headerfilho a{
+    font-size: 24px;
+    font-family: sdk;
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    transition: 0.5s;
+}
+.headerfilho a:hover{
+    color: var(--laranja_principal);
+}
+
 
 /* Fim do Css do Header */
 

@@ -3,17 +3,17 @@ function publicar() {
     var idUsuario = sessionStorage.ID_USUARIO;
     var idQuadradoClicado = sessionStorage.getItem('clickQuadrado')
 
-    if(idUsuario == undefined){
+    if (idUsuario == undefined) {
         alert(`Crie uma conta ou faça o login`)
         window.location.href = "login.html"
         return false  //porque o return false impede a pagina do cannot post? (aquela pagina em branco)
     }
-    else{
+    else {
         var corpo = {
             descricao: form_postagem.descricao.value,
             fkPublicacao: idQuadradoClicado
         }
-    
+
         fetch(`/avisos/publicar/${idUsuario}`, {
             method: "post",
             headers: {
@@ -21,11 +21,11 @@ function publicar() {
             },
             body: JSON.stringify(corpo)
         }).then(function (resposta) {
-    
+
             console.log("resposta: ", resposta);
             iniciarComentarios()
             atualizarComentarios()
-    
+
             if (resposta.ok) {
                 window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
             } else if (resposta.status == 404) {
@@ -36,14 +36,13 @@ function publicar() {
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         });
-        
+
         return false;
     }
 }
 
 // Exibindo comentarios das postagens 
 function atualizarComentarios() {
-
     var idQuadradoClicado = sessionStorage.getItem('clickQuadrado')
     fetch(`/avisos/listarPorIdPubli/${idQuadradoClicado}`)
         .then(function (resposta) {
@@ -84,10 +83,11 @@ function atualizarComentarios() {
         .catch(function (resposta) {
             console.error(resposta);
         });
+
 }
 
 // atualizando os comentarios a cada 1 segundo
-function iniciarComentarios(){
+function iniciarComentarios() {
     atualizarComentarios()
     setInterval(atualizarComentarios(), 1000)
 }
