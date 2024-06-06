@@ -60,8 +60,6 @@
 </html>
 
 <script>
-
-
     function entrar() {
         // aguardar();
 
@@ -87,49 +85,54 @@
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
+        var id = sessionStorage.ID_USUARIO
 
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
+        if (id != null) {
+            alert(`Desconecte da sessão primeiro antes de logar!`)
+        }
+        else{
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!")
+    
+                if (resposta.ok) {
+                    console.log(resposta);
+    
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.id;
+    
+                        setTimeout(function () {
+                            alert(`Login realizado com sucesso`)
+                            window.location = "index.html";
+                        }, 1000); // apenas para exibir o loading
+                    });
+                } else {
+    
+                    alert(`Email ou senha invalidos`)
+                    console.log("Houve um erro ao tentar realizar o login!");
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                    });
+                }
+    
+            }).catch(function (erro) {
+                console.log(erro);
             })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    setTimeout(function () {
-                        alert(`Login realizado com sucesso`)
-                        window.location = "index.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                alert(`Email ou senha invalidos`)
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
+    
+            return false;
+        }
     }
 </script>
