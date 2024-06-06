@@ -32,11 +32,7 @@ function plotarGrafico(resposta) {
 
     console.log('iniciando plotagem do gráfico...');
 
-    // Criando estrutura para plotar gráfico - labels
     var lista_elementos = resposta
-
-    // Criando estrutura para plotar gráfico - dados
-
 
     const ctx = document.getElementById('myChart');
 

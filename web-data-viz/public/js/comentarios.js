@@ -6,7 +6,7 @@ function publicar() {
     if (idUsuario == undefined) {
         alert(`Crie uma conta ou faça o login`)
         window.location.href = "login.html"
-        return false  //porque o return false impede a pagina do cannot post? (aquela pagina em branco)
+        return false 
     }
     else {
         var corpo = {
@@ -23,7 +23,6 @@ function publicar() {
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
-            iniciarComentarios()
             atualizarComentarios()
 
             if (resposta.ok) {
@@ -86,8 +85,3 @@ function atualizarComentarios() {
 
 }
 
-// atualizando os comentarios a cada 1 segundo
-function iniciarComentarios() {
-    atualizarComentarios()
-    setInterval(atualizarComentarios(), 1000)
-}
