@@ -1,12 +1,5 @@
-// Quadrado com a função de ir para a outra pagina
 
-function virarpagina(quadrado) {
-    var idQuadrado = quadrado;
-    sessionStorage.setItem('clickQuadrado', idQuadrado);
-    var url = 'Pagina Historia.html';
-    window.location.href = url;
-}
-
+// Seleção de qual quadrado foi clicado
 function selecao() {
     var quadrado1 = document.getElementById('quadradoQ1');
     var quadrado2 = document.getElementById('quadradoQ2');
@@ -29,6 +22,15 @@ function selecao() {
         virarpagina(4)
     });
 }
+
+// Ativando a função de virar pagina com o valor do quadrado
+function virarpagina(quadrado) {
+    var idQuadrado = quadrado;
+    sessionStorage.setItem('clickQuadrado', idQuadrado);
+    var url = 'Pagina Historia.html';
+    window.location.href = url;
+}
+
 
 // Mostrando as publicacoes do banco de dados
 function atualizarFeed() {

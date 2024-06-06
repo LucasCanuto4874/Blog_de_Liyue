@@ -60,31 +60,25 @@ body::-webkit-scrollbar-thumb {
     width: 59px;
     height: 68px;
     margin-left: 60px;
-
 }
 
 .headerfilho .hf2 {
     align-self: center;
     width: fit-content;
     height: 78px;
+    margin-left: 55px;
 }
-
-.headerfilho .hf3 {
-    width: fit-content;
-    height: 75px;
-    border-radius: 100%;
-    margin-right: 43px;
-}
-.headerfilho a{
-    font-size: 24px;
+.headerfilho .botoesHeader a{
+    font-size: 15px;
     font-family: sdk;
     color: white;
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 10px;
     transition: 0.5s;
+    cursor: pointer;
 }
-.headerfilho a:hover{
-    color: var(--laranja_principal);
+.headerfilho .botoesHeader a:hover{
+    color: var(--laranja_86_saturacao);
 }
 
 

@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="css/Reset.css">
     <link rel="stylesheet" href="css/pesquisa.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/sessao.js"></script>
-    <scripta src="js/alerta.js"></script>
+    <script src="js/sessao.js"></script>>
 </head>
 
 <body onload=" obterDadosGrafico()">
@@ -19,7 +18,10 @@
         <div class="headerfilho">
             <img src="src/img/elementos brancos/elemento Geo.png" alt="Elemento Geo" class="hf1">
             <a href="index.html"><img src="src/img/outros/Logo genshin.png " alt="Logo Genshin Impact" class="hf2"></a>
-            <a href="login.html" id="login">Login</a>
+            <div class="botoesHeader" id="botoesHeader">
+                <a href="login.html" id="login" class="loginHeader">Login <span>|</span></a>
+                <a href="" onclick="validarSessao()" class="loginHeader">| Desconectar</a>
+            </div>
         </div>
     </nav>
     <!-- fim do html do header -->

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,17 @@
     <link rel="stylesheet" href="css/login_cadastro.css">
     <script src="js/sessao.js"></script>
 </head>
+
 <body>
 
     <nav class="headerpai">
         <div class="headerfilho">
             <img src="src/img/elementos brancos/elemento Geo.png" alt="Elemento Geo" class="hf1">
             <a href="index.html"><img src="src/img/outros/Logo genshin.png " alt="Logo Genshin Impact" class="hf2"></a>
-            <a href="login.html" id="login" class="loginHeader">Login</a>
+            <div class="botoesHeader" id="botoesHeader">
+                <a href="login.html" id="login" class="loginHeader">Login <span>|</span></a>
+                <a href="" onclick="validarSessao()" class="loginHeader">| Desconectar</a>
+            </div>
         </div>
     </nav>
 
@@ -32,7 +37,9 @@
                 </div>
             </div>
             <h1>Não tem uma conta ainda?</h1>
-            <a href="cadastro.html"><h2>Cadastrar</h2></a>
+            <a href="cadastro.html">
+                <h2>Cadastrar</h2>
+            </a>
 
             <div class="botaologin" onclick="entrar()">
                 <img src="src/img/vetores/setas vetor.svg" alt="Avançar">
@@ -42,12 +49,14 @@
     </div>
 
     <footer>
-        <a href="https://github.com/LucasCanuto4874/Blog_de_Liyue"><img src="src/img/outros/logo github.svg" alt="github"></a>
-         <img src="src/img/elementos brancos/elemento Geo.png" alt="Elemento Geo" class="geoimgfooter">
-         <img src="src/img/outros/logo likedin.svg" alt="likedin">
-     </footer>
+        <a href="https://github.com/LucasCanuto4874/Blog_de_Liyue"><img src="src/img/outros/logo github.svg"
+                alt="github"></a>
+        <img src="src/img/elementos brancos/elemento Geo.png" alt="Elemento Geo" class="geoimgfooter">
+        <img src="src/img/outros/logo likedin.svg" alt="likedin">
+    </footer>
 
 </body>
+
 </html>
 
 <script>
@@ -65,18 +74,15 @@
             return false;
             alert(`Preencha todos os campos!`)
         }
-        else if(emailVar.indexOf("@") < 0 || emailVar.indexOf(".com") < 0){
+        else if (emailVar.indexOf("@") < 0 || emailVar.indexOf(".com") < 0) {
             alert(`Insira o email corretamente!`)
             finalizarAguardar();
             return false;
         }
-        else if(senhaVar.length > 8){
+        else if (senhaVar.length > 8) {
             alert(`Senha incorreta!`)
             finalizarAguardar();
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -112,12 +118,11 @@
 
             } else {
 
-                alert(`Houve um erro ao realizar o login`)
+                alert(`Email ou senha invalidos`)
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 
@@ -127,9 +132,4 @@
 
         return false;
     }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
 </script>
