@@ -17,6 +17,8 @@
     --azul_login: #00AEE5;
     --laranja_46_saturação: #B47843;
     --preto_fundo_texto: rgb(0, 0, 0, 0.75);
+    --laranja_76_saturação: #D9761E;
+    --laranja_principal: #F27405;
 }
 
 body,
@@ -78,7 +80,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 .headerfilho .botoesHeader a:hover{
-    color: var(--laranja_86_saturacao);
+    color: var(--laranja_principal);
 }
 
 

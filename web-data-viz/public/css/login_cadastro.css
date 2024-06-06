@@ -16,6 +16,8 @@
     --vermelho_58_brilho: #FB2D2D;
     --azul_login: #00AEE5;
     --laranja_86_saturacao: #E67511;
+    --laranja_76_saturação: #D9761E;
+    --laranja_principal: #F27405;
 }
 
 body,
@@ -77,7 +79,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 .headerfilho a:hover{
-    color: var(--laranja_86_saturacao);
+    color: var(--laranja_principal);
 }
 /* css do popup login */
 .popuplogin {

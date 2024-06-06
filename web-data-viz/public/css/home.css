@@ -81,7 +81,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 .headerfilho .botoesHeader a:hover{
-    color: var(--laranja_86_saturacao);
+    color: var(--laranja_principal);
 }
 /* Fim do Css do Header */
 

@@ -19,6 +19,7 @@
     --laranja_76_saturação: #D9761E;
     --vermelho_38_brilho: #BE0404;
     --preto_50_transparente: rgb(0, 0, 0, 0.50);
+    --laranja_principal: #F27405;
 }
 
 body,
@@ -83,7 +84,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 .headerfilho a:hover{
-    color: var(--laranja_86_saturacao);
+    color: var(--laranja_principal);
 }
 
 
