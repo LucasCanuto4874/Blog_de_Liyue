@@ -4,7 +4,7 @@ var mysql = require("mysql2");
 var mySqlConfig = {
     host: process.env.HOST,
     database: process.env.DATABASE,
-    user: process.env.USER,
+    user: process.env.USER_BD,
     password: process.env.PASSWORD,
     port: process.env.PORT
 };
