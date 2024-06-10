@@ -262,18 +262,16 @@ form {
 #feed_comentarios{
     width: 850px;
     height: 400px;
-    overflow: hidden;
-    overflow-y: scroll;
 }
-#feed_comentarios::-webkit-scrollbar{
+.resultados::-webkit-scrollbar{
     width: 10px;
 }
-#feed_comentarios::-webkit-scrollbar-track {
+.resultados::-webkit-scrollbar-track {
     background: var(--azul_principal);
     border-radius: 20px;
 }
 
-#feed_comentarios::-webkit-scrollbar-thumb {
+.resultados::-webkit-scrollbar-thumb {
     background-color: var(--laranja_76_saturação);
     border-radius: 20px;
 }
@@ -287,6 +285,8 @@ form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .postagens {
